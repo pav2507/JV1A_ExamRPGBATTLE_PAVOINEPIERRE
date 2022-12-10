@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG_BATTLE</title>
+    <script src="fichier_2_js_rpg.js" async></script>
+<style type="text/css">
+
+/* je me sert de css pour choisir la taille de mes persos, de mes enemis, de mon fond et de mon texte.
+il me sert egalement a placer les elementsd dans l'espace et egalement a choisir la couleurs de certains elements*/ 
+
+body{
+    display : flex;  
+    justify-content: space-around;
+    background-image:url('asset/cityfond.jpg');
+    background-size: 2467px,1696px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    align-items: flex-end;
+}
+
+
+.lespersos{     /* ici les alliés */
+    height:100vh;
+    display : flex ; 
+    justify-content: end;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+#personnage1{
+    width : 200px;
+    height : 200px;   
+}
+
+#nomperso1{
+    display: flex;
+    color : white;
+    justify-content: center;
+}
+
+#pvperso1{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#manaperso1{
+    display: flex;
+    color : purple;
+    justify-content: center;
+}
+
+#personnage2{
+    width : 200px;
+    height : 200px;
+}
+
+#nomperso2{
+    display: flex;
+    color : white;
+    justify-content: center;
+}
+
+#pvperso2{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#manaperso2{
+    display: flex;
+    color : purple;
+    justify-content: center;
+}
+
+#personnage3{
+    width : 200px;
+    height : 200px;
+}
+
+#nomperso3{
+    display: flex;
+    color : white;
+    justify-content: center;
+}
+
+#pvperso3{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#manaperso3{
+    display: flex;
+    color : purple;
+    justify-content: center;
+}
+
+#personnage4{
+    width : 200px;
+    height : 200px;
+}
+
+#nomperso4{
+    display: flex;
+    color : white;
+    justify-content: center;
+}
+
+#pvperso4{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#manaperso4{
+    display: flex;
+    color : purple;
+    justify-content: center;
+}
+
+
+
+.lesmechants{  /* ici les enemis */
+    height:100vh;
+    display : flex ; 
+    justify-content: end;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+
+#mechant1{
+    width : 200px;
+    height : 200px;
+}
+
+#pvmechant1{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#mechant2{
+    width : 200px;
+    height : 200px;
+}
+
+#pvmechant2{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+#mechant3{
+    width : 200px;
+    height : 200px;
+}
+
+#pvmechant3{
+    display: flex;
+    color : green;
+    justify-content: center;
+}
+
+
+.texte{ /* ici je place une page de texte pour annoncer les attaques les defenses ou encore les coups spéciaux  */
+    display : flex ; 
+    justify-content: center;
+    background-image: url("asset/texte_fond2.png");
+    width : 450px;
+    height : 350px;
+    margin-bottom: 7%;
+}
+
+
+
+#texte1{
+    width : 500px;
+    height : 500px;
+    flex-direction: row;
+}
+
+.attaquer {
+    text-align: center;
+    padding : 1em;
+    border : 1em solid rgb(165, 108, 108);
+    width  : 4em;
+    height : 4em;
+    margin-top: 65%;
+}
+
+.defendre {
+    text-align: center;
+    padding : 1em;
+    border : 1em solid rgb(120, 121, 167);
+    width  : 4em;
+    height : 4em;
+}
+
+.magie {
+    text-align: center;
+    padding : 1em;
+    border : 1em solid rgb(170, 127, 187);
+    width  : 4em;
+    height : 4em;
+}
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="lespersos">
+        <img id="personnage1" class="perso" src="asset/heros1.gif" /> 
+            <div id="nomperso1">ALAN</div>
+            <div id="pvperso1">100</div>
+            <div id="manaperso1">100</div>
+        <img id="personnage2" class="perso" src="asset/heros2.gif" />
+            <div id="nomperso2">rick</div>
+            <div id="pvperso2">100</div>
+            <div id="manaperso2">100</div>
+        <img id="personnage3" class="perso" src="asset/heros3.gif" />
+            <div id="nomperso3">jack</div>
+            <div id="pvperso3">100</div>
+            <div id="manaperso3">100</div>
+        <img id="personnage4" class="perso" src="asset/heros4.gif" />
+            <div id="nomperso4">lloris</div>
+            <div id="pvperso4">100</div>
+            <div id="manaperso4">100</div>
+        </div>
+        <div class="texte">
+            <div id="texte1" class="texte" >   
+                <div class="spell">
+                    <div id="action1" class="attaquer"> Attaquer  </div>
+                    <div id="action2" class="defendre"> Se Defendre  </div>
+                    <div id="action3" class="magie"> magie  </div>
+                </div>
+            </div>
+    
+        </div>
+     <div class="lesmechants">
+        <img id="mechant1" class="mechant" src="asset/mechant.gif"/>
+            <div id="pvmechant1">100</div>
+        <img id="mechant2" class="mechant" src="asset/mechant.gif"/>
+            <div id="pvmechant2">100</div>
+        <img id="mechant3" class="mechant" src="asset/mechant.gif"/>
+            <div id="pvmechant3">100</div>
+     </div>    
+
+    </div>    
+
+
+</body>
+</html>
+
